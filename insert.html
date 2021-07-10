@@ -1,0 +1,56 @@
+{% extends "master_template.html" %}
+    {%block title%}
+    This is the Main Index Page
+    {%endblock%}
+  {%block body%}
+  <h1 class="label label-success">Horizontal form</h1>
+  <form class="form-horizontal" action="/view" method="post" >
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="fname">First Name:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="fname" placeholder="Enter First Name" name="fname" required>
+
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="lname">Last Name:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="session">Session:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="session" placeholder="Enter Session" name="session">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="sub_fee">Submitted_fee:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="sub_fee" placeholder="Enter Submitted_fee" name="sub_fee">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="due_fee">Due_fee:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="due_fee" placeholder="Enter Due_fee" name="due_fee">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="tot_fee">Total_fee:</label>
+      <div class="col-sm-10">
+        <input class="form-control" id="tot_fee" placeholder="Enter Total_fee" name="tot_fee">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+{%endblock%}

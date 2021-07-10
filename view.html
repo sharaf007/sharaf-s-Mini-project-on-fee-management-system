@@ -1,0 +1,33 @@
+{% extends "master_template.html" %}
+{%block title%}
+  This is View
+{%endblock%}
+
+{% block body%}
+  <h2>Welcome</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Session</th>
+        <th>Submitted Fee</th>
+        <th>Due Fee</th>
+        <th>Total Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for stud in students%}
+      <tr>
+        <td>{{stud.firstname}}</td>
+        <td>{{stud.lastname}}</td>
+        <td>{{stud.session}}</td>
+        <td>{{stud.submittedfee}}</td>
+        <td>{{stud.duefee}}</td>
+        <td>{{stud.totalfee}}</td>
+        <!-- <td><a href="/update/{{stud.id}}">update</a>, <a href="/delete/{{stud.id}}">delete</a></td> -->
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+  {%endblock%}
